@@ -9,8 +9,10 @@ STOCK_DATA_PATH = os.path.join(home, 'stock_data', 'stock_daily_data')
 INDEX_DATA_PATH = os.path.join(home, 'stock_data', 'index_daily_data')
 MINUTE_DATA_PATH = os.path.join(home, 'stock_data', 'minute_daily_data')
 
-MYSQL_CONN = 'mysql://stock_prediction:jixian@192.168.100.118/stock_prediction?charset=utf8'
-DB_CONN = create_engine(MYSQL_CONN)
+# MYSQL_CONN = 'mysql://stock_prediction:jixian@192.168.100.118/stock_prediction?charset=utf8'
+# DB_CONN = create_engine(MYSQL_CONN)
+SQLITE_CONN = 'sqlite:///test.db'
+DB_CONN = create_engine(SQLITE_CONN)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(PROJECT_ROOT)
